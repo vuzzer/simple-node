@@ -14,7 +14,7 @@ before_script:
 script:
   - docker --version
   - docker build -t simple-node .
-  - docker tag simple_node bienvenuparfait/simple-node:latest
+  - docker tag simple-node bienvenuparfait/simple-node:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
